@@ -1,0 +1,15 @@
+Appli:
+Connexion, Inscription
+
+Admin
+Gestion des utilisateurs (ajout, recherche, suppression, upgrade, downgrade)
+Gestion des fichiers audios, bibliothèque communautaire (ajout, recherche, suppression, deplacement)
+Accès au demande d'ajout utilisateur. Avec ajout ou refus d'ajout dans la Bibliothèque communautaire + message automatique au demandeur pour l'avertir de la réponse.
+
+Utilisateur
+Gerer son profil (ajout, supression, modification)
+Recherche de fichier audio dans la bibliothèque communautaire.
+Demande d'ajout(fichier temporaire), signalez un contenu.
+Gerer ces bibliothèques (ajout, supression, recherche, download)
+Gerer ces playlists (ajout, supression, recherche, gestion de l'ordre des pist audio)
+Lire un fichier audio ou une playlist + Reprendre a l'endrois arreter.
