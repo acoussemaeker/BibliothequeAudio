@@ -1,11 +1,10 @@
 <?php
 session_start();
-$type = '0';
+$type = '1';
 $connect = '1'; // quand on le codera ici on le controlera avec une variable de session
 if ($connect == '1') {
     $menu = 'oui';
-}
-else {
+} else {
     $menu = "non";
 }
 ?>
@@ -35,9 +34,9 @@ else {
             <script src="../js/jquery-ui-1.10.4.min.js"></script>
             <script src="../js/jquery.ui.datepicker-fr.js"></script>
             <script src="../js/script.js"></script>
-    <?php
-}
-?>
+            <?php
+        }
+        ?>
         <title><?php echo $titre; ?></title>
     </head>
     <body>
@@ -50,59 +49,68 @@ else {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <!--<a class="navbar-brand" href="#">CTE</a>-->
+                <a class="navbar-brand" href="#">Bibliotheque Audio</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
                 <!-- Collect the nav links, forms, and other content for toggling -->
-<?php
-if ($connect == 0) {
+                <?php
+                if ($connect == 0) {
 //                    echo '<li><a>Connecté en temps que : ' . $_SESSION['nom_user'] . ' ' . $_SESSION['prenom_user'].'</a></li>';
-    echo '<input type="button" class="btn btn-default" id="logout" value="Connexion" onclick="location.href=\'logout.php\'" />';
-    echo '<input type="password" class="btn btn-default" id="logout" placeholder="Password" />';
-    echo '<input type="text" class="btn btn-default" id="logout" placeholder="Login" />';
-} else {
-    echo '<div class=" btn-default" id="logout"></div>';
-    echo '<input type="button" class="btn btn-default" id="logout" value="Deconnexion" onclick="location.href=\'logout.php\'" />';
-    echo '<input type="button" class="btn btn-default" id="logout" value="Biblio perso" onclick="location.href=\'BiblioPerso.php\'" />';
-    echo '<input type="button" class="btn btn-default" id="logout" value="Biblo commune" onclick="location.href=\'BiblioCommune.php\'" />';
-    echo '<input type="button" class="btn btn-default" id="logout" value="profile" onclick="location.href=\'ProfilUser.php\'" />';
-}
-?>
+                    echo '<input type="button" class="btn btn-default" id="logout" value="Connexion" onclick="location.href=\'logout.php\'" />';
+                    echo '<input type="password" class="btn btn-default" id="logout" placeholder="Password" />';
+                    echo '<input type="text" class="btn btn-default" id="logout" placeholder="Login" />';
+                } else {
+                    echo '<div class=" btn-default" id="logout"></div>';
+                    echo '<input type="button" class="btn btn-default" id="logout" value="Deconnexion" onclick="location.href=\'logout.php\'" />';
+                    echo '<input type="button" class="btn btn-default" id="logout" value="Biblio perso" onclick="location.href=\'BiblioPerso.php\'" />';
+                    echo '<input type="button" class="btn btn-default" id="logout" value="Biblo commune" onclick="location.href=\'BiblioCommune.php\'" />';
+                    echo '<input type="button" class="btn btn-default" id="logout" value="profile" onclick="location.href=\'ProfilUser.php\'" />';
+                }
+                ?>
             </ul>
         </nav>
-                <?php
-                if ($menu == 'non') {
+        <?php
+        if ($menu == 'non') {
 //        echo '&nbspVous n\'êtes pas connecté.'; 
-                } else {
-                    ?>
+        } else {
+            ?>
             <div class="bande-gauche">
                 <div class="menu-gauche" >
                     <ul class="nav nav-pills nav-stacked">
                         <!--<h5 class="titreSection">COURS</h5>-->
-                        <li <?php if ($_SERVER['PHP_SELF'] == "/BibliothequeAudio/playlist.php") echo "class='active'"; ?>><a href="playlist.php">Gestion des playlist</a></li> <!--Si la page actuelle est 'accueil.php', on ajoute la classe 'active' à l'élément-->
+                        <?php
+                        if($type == "0"){
+                        ?>
+                        <li <?php if ($_SERVER['PHP_SELF'] == "/BibliothequeAudio/view/playlist.php") echo "class='active'"; ?>><a href="playlist.php">Gestion des playlist</a></li> <!--Si la page actuelle est 'accueil.php', on ajoute la classe 'active' à l'élément-->
                         <li >
                             <div class="form-group">
                                 <input type="search" class="input-sm form-control" placeholder="Recherche">
                                 <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> Chercher</button>
                             </div>
                         </li>
-                        <li ><img src="../image/musique.png" class="img-rounded"></li>
-                        <li <?php if ($_SERVER['PHP_SELF'] == "/CTE/syllabus.php") echo "class='active'"; ?>><a href="syllabus.php">Syllabus</a></li>
+                        </br>
+                        <li ><img src="../image/musique.png" class="img-rounded image"></li>
+                        <li>
+                            <audio controls="controls" preload="none" class="image">
+                                <source src="audio/'.$info->Nom.'.mp3" type="audio/mp3" />
+                            </audio>
+                        </li>
                         <br/><hr/><br/>
 
-    <?php
-    if ($type == '1') { //SECTION VISIBLE UNIQUEMENT PAR LES ADMINS
-        ?>
+                        <?php
+                        }
+                        else{ //SECTION VISIBLE UNIQUEMENT PAR LES ADMINS
+                            ?>
                             <h5 class="titreSection">ADMINISTRATION</h5>
-                            <li <?php if (($_SERVER['PHP_SELF'] == "/CTE/user.php") || ($_SERVER['PHP_SELF'] == "/CTE/addUser.php") || ($_SERVER['PHP_SELF'] == "/CTE/modifUser.php")) echo "class='active'"; ?>><a href="user.php">Gestion des utilisateurs</a></li>
-                            <li <?php if ($_SERVER['PHP_SELF'] == "/CTE/historique.php") echo "class='active'"; ?>><a href="historique.php">Historique</a></li>
-                            <li <?php if ($_SERVER['PHP_SELF'] == "/CTE/import.php") echo "class='active'"; ?>><a href="import.php">Importer</a></li>
+                            <li <?php if ($_SERVER['PHP_SELF'] == "/BibliothequeAudio/view/Gestion_User.php") echo "class='active'"; ?>><a href="Gestion_User.php">Gestion des utilisateurs</a></li>
+                            <li <?php if ($_SERVER['PHP_SELF'] == "/BibliothequeAudio/view/Gestion_File.php") echo "class='active'"; ?>><a href="Gestion_File.php">Gestion des fichiers audio</a></li>
+                            <li <?php if ($_SERVER['PHP_SELF'] == "/BibliothequeAudio/view/Gestion_Request.php") echo "class='active'"; ?>><a href="Gestion_Request.php">Gestion des demandes</a></li>
                             <br/>
-        <?php
-    } //FIN SECTION ADMIN
-    ?>
+                            <?php
+                        } //FIN SECTION ADMIN
+                        ?>
                     </ul>
                 </div>
             </div>
-    <?php
-}?>
+            <?php
+        }?>

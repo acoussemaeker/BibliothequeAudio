@@ -1,24 +1,15 @@
-
 <?php
-$titre = 'Bibliotheque Commune';
-
-
+$titre = 'Gestion des fichier audio';
 include 'header.php';
 include 'Connection_BDD.php';
-
 ?>
-
-<!--    <body>
-        
-    </body>
-</html>-->
 
 <table class="table table-hover tableListe">
     <thead>
         <tr class="info">
-            <th>Image</th>
             <th>Titre</th>
-            <th>Lecteur</th>
+            <th>localisation</th>
+            <th></th>
             <th></th>
         </tr>
     </thead>
@@ -34,17 +25,16 @@ include 'Connection_BDD.php';
                         ' . $info->Nom . '
                     </td>
                     <td>
-                        ' . $info->Nom . '
+                        ' . $info->Emplacement . '
                     </td>
                     <td>
-                       <audio controls="controls" preload="none" class="image">
-                            <source src="audio/'.$info->Nom.'.mp3" type="audio/mp3" />
-                       </audio>
+                       <div class="btn-group" role="group" aria-label="...">
+                             <button type="button" class="btn btn-default">delete</button>
+                             <button type="button" class="btn btn-default">move</button>
+                      </div>
                     </td>';
         
-        if($connect == 1){
-        echo '<td> <input type="button" value="ajouter a la playlist"/> </td>';
-        }
+       
                    
                     
         echo '  </tr>';
