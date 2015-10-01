@@ -2,7 +2,7 @@ Options +FollowSymlinks
 RewriteEngine On
 
 
-RewriteRule ^ws/([a-zA-Z0-9_-]+)/([0-9]+)$ Controller/UserController.php?act=$1&id=$2 [L]
-RewriteRule ^ws/([a-zA-Z0-9_-]+)/([0-9]+)/$ Controller/UserController.php?act=$1&id=$2 [L]
-RewriteRule ^ws/([a-zA-Z0-9_-]+)$ Controller/UserController.php?act=$1
-RewriteRule ^ws/([a-zA-Z0-9_-]+)/$ Controller/UserController.php?act=$1
+RewriteRule ^wrgdhs/([a-zA-Z0-9_-]+)/([0-9]+)$ Controller/UserController.php?act=$1&id=$2 [L]
+RewriteRule ^wrgdhs/([a-zA-Z0-9_-]+)/([0-9]+)/$ Controller/UserController.php?act=$1&id=$2 [L]
+RewriteRule ^wrgdhs/([a-zA-Z0-9_-]+)$ Controller/UserController.php?act=$1
+RewriteRule ^wrgdhs/([a-zA-Z0-9_-]+)/$ Controller/UserController.php?act=$1

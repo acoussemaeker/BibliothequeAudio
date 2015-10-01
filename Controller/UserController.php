@@ -4,7 +4,7 @@ include_once'../ws/WS_User.php';
 
 //GEstion d'erreur
 $className = "WS_User";
-
+echo "okslkfmqkslfkqslmkd";
 $array = [
     "nomUser" => $_POST['nomUser'],
     "prenomUser" => $_POST['prenomUser'],
@@ -41,5 +41,5 @@ $ws_response = $ws_instance->$method();
 //        break;
 //}
 
-header('Location: ../view/BiblioCommune.php');
+//header('Location: ../view/BiblioCommune.php');
 echo json_encode($ws_response);

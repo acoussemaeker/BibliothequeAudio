@@ -5,7 +5,7 @@ include 'header.php';
 ?>
 <div class="nouveau">
     <div class="milieuPage">
-        <form action="../ws/User" method="GET">
+        <form action="../Controller/UserController.php" method="POST">
             <div class="form-group">
                 <label for="contenu">Pseudo</label>
                 <input type="text" value="" name="nomUser" class="form-control"/>
