@@ -1,5 +1,13 @@
 <?php
 session_start();
+$type = '0';
+$connect = '1'; // quand on le codera ici on le controlera avec une variable de session
+if ($connect == '1') {
+    $menu = 'oui';
+}
+else {
+    $menu = "non";
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -7,30 +15,29 @@ session_start();
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <!--<link rel="stylesheet" href="css/datepicker.css"/>-->
         <?php
-            if($titre == 'Connexion'){
-         ?>
-         <link rel="stylesheet" href="css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="css/ui-flick/jquery-ui.min.css"/>
-        <link rel="stylesheet" href="css/style.css"/>
-        <link rel="icon" type="image/png" href="cte.png" />
-        <script src="js/jquery-1.10.2.js"></script>
-        <script src="/js/jquery-ui-1.10.4.min.js"></script>
-        <script src="js/script.js"></script>
-        <?php
-            }
- else {
-        ?>
-        <link rel="stylesheet" href="../css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="../css/ui-flick/jquery-ui.min.css"/>
-        <link rel="stylesheet" href="../css/style.css"/>
-        <link rel="icon" type="../image/png" href="cte.png" />
-        <script src="../js/jquery-1.10.2.js"></script>
-        <script src="../js/jquery-ui-1.10.4.min.js"></script>
-        <script src="../js/jquery.ui.datepicker-fr.js"></script>
-        <script src="../js/script.js"></script>
-        <?php
-           }
-        ?>
+        if ($titre == 'Connexion') {
+            ?>
+            <link rel="stylesheet" href="css/bootstrap.min.css"/>
+            <link rel="stylesheet" href="css/ui-flick/jquery-ui.min.css"/>
+            <link rel="stylesheet" href="css/style.css"/>
+            <link rel="icon" type="image/png" href="cte.png" />
+            <script src="js/jquery-1.10.2.js"></script>
+            <script src="/js/jquery-ui-1.10.4.min.js"></script>
+            <script src="js/script.js"></script>
+            <?php
+        } else {
+            ?>
+            <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+            <link rel="stylesheet" href="../css/ui-flick/jquery-ui.min.css"/>
+            <link rel="stylesheet" href="../css/style.css"/>
+            <link rel="icon" type="../image/png" href="cte.png" />
+            <script src="../js/jquery-1.10.2.js"></script>
+            <script src="../js/jquery-ui-1.10.4.min.js"></script>
+            <script src="../js/jquery.ui.datepicker-fr.js"></script>
+            <script src="../js/script.js"></script>
+    <?php
+}
+?>
         <title><?php echo $titre; ?></title>
     </head>
     <body>
@@ -47,51 +54,55 @@ session_start();
             </div>
             <ul class="nav navbar-nav navbar-right">
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <?php
-                if ($connect == 0) {
+<?php
+if ($connect == 0) {
 //                    echo '<li><a>Connecté en temps que : ' . $_SESSION['nom_user'] . ' ' . $_SESSION['prenom_user'].'</a></li>';
-                    echo '<input type="button" class="btn btn-default" id="logout" value="Connexion" onclick="location.href=\'logout.php\'" />';
-                    echo '<input type="password" class="btn btn-default" id="logout" placeholder="Password" />';
-                    echo '<input type="text" class="btn btn-default" id="logout" placeholder="Login" />';
-                } else {
-                   echo '<div class=" btn-default" id="logout"></div>';
-                    echo '<input type="button" class="btn btn-default" id="logout" value="Deconnexion" onclick="location.href=\'logout.php\'" />';
-                    echo '<input type="button" class="btn btn-default" id="logout" value="Biblio perso" onclick="location.href=\'logout.php\'" />';
-                    echo '<input type="button" class="btn btn-default" id="logout" value="Biblo commune" onclick="location.href=\'logout.php\'" />';
-                    echo '<input type="button" class="btn btn-default" id="logout" value="profile" onclick="location.href=\'view/ProfilUser.php\'" />';
-                    
-                }
-                ?>
+    echo '<input type="button" class="btn btn-default" id="logout" value="Connexion" onclick="location.href=\'logout.php\'" />';
+    echo '<input type="password" class="btn btn-default" id="logout" placeholder="Password" />';
+    echo '<input type="text" class="btn btn-default" id="logout" placeholder="Login" />';
+} else {
+    echo '<div class=" btn-default" id="logout"></div>';
+    echo '<input type="button" class="btn btn-default" id="logout" value="Deconnexion" onclick="location.href=\'logout.php\'" />';
+    echo '<input type="button" class="btn btn-default" id="logout" value="Biblio perso" onclick="location.href=\'BiblioPerso.php\'" />';
+    echo '<input type="button" class="btn btn-default" id="logout" value="Biblo commune" onclick="location.href=\'BiblioCommune.php\'" />';
+    echo '<input type="button" class="btn btn-default" id="logout" value="profile" onclick="location.href=\'ProfilUser.php\'" />';
+}
+?>
             </ul>
         </nav>
-        <?php
-        if ($menu == 'non') {
+                <?php
+                if ($menu == 'non') {
 //        echo '&nbspVous n\'êtes pas connecté.'; 
-        } else {
-            ?>
+                } else {
+                    ?>
             <div class="bande-gauche">
                 <div class="menu-gauche" >
                     <ul class="nav nav-pills nav-stacked">
-                        <h5 class="titreSection">COURS</h5>
-                        <li <?php if ($_SERVER['PHP_SELF'] == "/CTE/accueil.php") echo "class='active'"; ?>><a href="accueil.php">Nouveau</a></li> <!--Si la page actuelle est 'accueil.php', on ajoute la classe 'active' à l'élément-->
-                        <li <?php if (($_SERVER['PHP_SELF'] == "/CTE/search.php") || ($_SERVER['PHP_SELF'] == "/CTE/modifCours.php")) echo "class='active'"; ?>><a href="search.php">Rechercher</a></li>
-                        <li <?php if ($_SERVER['PHP_SELF'] == "/CTE/interro.php") echo "class='active'"; ?>><a href="interro.php">Interrogations</a></li>
+                        <!--<h5 class="titreSection">COURS</h5>-->
+                        <li <?php if ($_SERVER['PHP_SELF'] == "/BibliothequeAudio/playlist.php") echo "class='active'"; ?>><a href="playlist.php">Gestion des playlist</a></li> <!--Si la page actuelle est 'accueil.php', on ajoute la classe 'active' à l'élément-->
+                        <li >
+                            <div class="form-group">
+                                <input type="search" class="input-sm form-control" placeholder="Recherche">
+                                <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> Chercher</button>
+                            </div>
+                        </li>
+                        <li ><img src="../image/musique.png" class="img-rounded"></li>
                         <li <?php if ($_SERVER['PHP_SELF'] == "/CTE/syllabus.php") echo "class='active'"; ?>><a href="syllabus.php">Syllabus</a></li>
                         <br/><hr/><br/>
 
-                        <?php
-//                    if($_SESSION['type']=='1'){ //SECTION VISIBLE UNIQUEMENT PAR LES ADMINS
-                        ?>
-                        <h5 class="titreSection">ADMINISTRATION</h5>
-                        <li <?php if (($_SERVER['PHP_SELF'] == "/CTE/user.php") || ($_SERVER['PHP_SELF'] == "/CTE/addUser.php") || ($_SERVER['PHP_SELF'] == "/CTE/modifUser.php")) echo "class='active'"; ?>><a href="user.php">Gestion des utilisateurs</a></li>
-                        <li <?php if ($_SERVER['PHP_SELF'] == "/CTE/historique.php") echo "class='active'"; ?>><a href="historique.php">Historique</a></li>
-                        <li <?php if ($_SERVER['PHP_SELF'] == "/CTE/import.php") echo "class='active'"; ?>><a href="import.php">Importer</a></li>
-                        <br/>
-                        <?php
-//                    } //FIN SECTION ADMIN
-                        ?>
+    <?php
+    if ($type == '1') { //SECTION VISIBLE UNIQUEMENT PAR LES ADMINS
+        ?>
+                            <h5 class="titreSection">ADMINISTRATION</h5>
+                            <li <?php if (($_SERVER['PHP_SELF'] == "/CTE/user.php") || ($_SERVER['PHP_SELF'] == "/CTE/addUser.php") || ($_SERVER['PHP_SELF'] == "/CTE/modifUser.php")) echo "class='active'"; ?>><a href="user.php">Gestion des utilisateurs</a></li>
+                            <li <?php if ($_SERVER['PHP_SELF'] == "/CTE/historique.php") echo "class='active'"; ?>><a href="historique.php">Historique</a></li>
+                            <li <?php if ($_SERVER['PHP_SELF'] == "/CTE/import.php") echo "class='active'"; ?>><a href="import.php">Importer</a></li>
+                            <br/>
+        <?php
+    } //FIN SECTION ADMIN
+    ?>
                     </ul>
                 </div>
             </div>
-            <?php
-        }?>
+    <?php
+}?>
