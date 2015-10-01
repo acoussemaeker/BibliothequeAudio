@@ -12,7 +12,6 @@ function Connexion(){
         type:'POST',
         async:false,
         success: function(data){
-            alert(data);
             var obj = JSON.parse(data)
             var pass= $('#Password').val()
 
@@ -21,7 +20,7 @@ function Connexion(){
 
                 $.ajax({
                     type: "POST",
-                    url: "../view/ProfilUser.php",
+                    url: "../view/BiblioCommune.php",
                     data: { Password: obj.Password,
                         Pseudo: obj.Pseudo},
                     success:function(data){

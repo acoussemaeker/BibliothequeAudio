@@ -23,7 +23,7 @@ class WS_Connexion implements IWebServiciable {
         try {
             $cnx = Connection_BDD::getInstance();
 
-            $SQL = "SELECT Pseudo, Password FROM user WHERE Pseudo='".$this->requestParams['Pseudo']."'";
+            $SQL = "SELECT Pseudo, Password, Grade FROM user WHERE Pseudo='".$this->requestParams['Pseudo']."'";
             $rs = $cnx->query($SQL);
             while ($info = $rs->fetch_object()) {
                 return (json_encode($info));

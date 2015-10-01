@@ -1,19 +1,23 @@
 <?php
 session_start();
 
-if(isset($_POST["Pseudo"])){
-
-    $_SESSION['connexion'] = $_POST["Pseudo"];
-    $_SESSION['password'] = $_POST["Password"];
-    $connect = '1';
-}else{
-    $_session['connexion'] = "0";
-    $connect = '0';
+if($_SESSION['connexion'] != null){
+    $test = (json_decode($_SESSION['connexion']));
+    $connect = 1;
+    if($test->Grade =='1'){
+        $type = '1';
+    }else{
+        $type = '0';
+    }
+}
+else{
+    $connect = 0;
+    $type = '0';
 }
 
 include '../view/Connection_BDD.php';
 $cnx = Connection_BDD::getInstance();
-$type = '0';
+
  // quand on le codera ici on le controlera avec une variable de session
 if ($connect == '1') {
     $menu = 'oui';
@@ -77,7 +81,7 @@ if ($connect == '1') {
                     echo '<input type="text" class="btn btn-default position" id="Login" placeholder="Login" />';
                 } else {
                     echo '<div class=" btn-default" id="logout"></div>';
-                    echo '<input type="button" class="btn btn-default position" id="Deconnexion" value="Deconnexion" onclick="location.href=\'logout.php\'" />';
+                    echo '<input type="button" class="btn btn-default position" id="Deconnexion" value="Deconnexion" onclick="location.href=\'../index.php\'" />';
                     echo '<input type="button" class="btn btn-default position" id="BiblioPerso" value="Biblio perso" onclick="location.href=\'BiblioPerso.php\'" />';
                     echo '<input type="button" class="btn btn-default  position" id="BiblioCommune" value="Biblo commune" onclick="location.href=\'BiblioCommune.php\'" />';
                     echo '<input type="button" class="btn btn-default  position" id="profile" value="profile" onclick="location.href=\'ProfilUser.php\'" />';

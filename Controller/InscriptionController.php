@@ -10,6 +10,8 @@ $array = [
     "MailUser" => $_POST['MailUser']
 ];
 
+
+
 $ws_instance = new $className($array);
 //$ws_security = new WS_Securities();
 

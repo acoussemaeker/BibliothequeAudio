@@ -1,28 +1,27 @@
 <script>
     function Inscription(){
-
-    var URL = "../Controller/InscriptionController.php";
-    var params = {
-        'nomUser' : $('#nomUser').val(),
-        'passwordUser' : $('#passwordUser').val(),
-        'MailUser' : $('#MailUser').val()
-    };
-    $.ajax({
-    url: URL,
-    data: params,
-    dataType: 'text',
-    type:'POST',
-    async:false,
-    success: function(data){
-        if(data == true){
-            window.location.href ='../index.php';
-        }else{
-            alert('toto');
-        }
-    },
-    error: function(){
-    alert('Problème rencontré dans le réseau.');}
-    });
+        var URL = "../Controller/InscriptionController.php";
+        var params = {
+            'nomUser' : $('#nomUser').val(),
+            'passwordUser' : $('#passwordUser').val(),
+            'MailUser' : $('#MailUser').val()
+        };
+        $.ajax({
+        url: URL,
+        data: params,
+        dataType: 'text',
+        type:'POST',
+        async:false,
+        success: function(data){
+            if(data == true){
+                window.location.href ='../index.php';
+            }else{
+                alert('toto');
+            }
+        },
+        error: function(){
+        alert('Problème rencontré dans le réseau.');}
+        });
     }
 </script>
 

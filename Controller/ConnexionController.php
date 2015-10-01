@@ -40,4 +40,7 @@ $ws_response = $ws_instance->$method();
 //}
 
 
+session_start();
+$_SESSION['connexion'] = "$ws_response";
+
 echo $ws_response;
