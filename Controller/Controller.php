@@ -1,6 +1,6 @@
 <?php
 
-include_once'../ws/WS_User.php';
+include_once '../ws/WS_Inscription.php';
 
 //GEstion d'erreur
 $className = "WS_".$_GET['act'];

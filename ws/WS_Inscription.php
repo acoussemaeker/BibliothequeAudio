@@ -3,7 +3,7 @@
 require '../view/Connection_BDD.php';
 require_once '/IWebServiciable.php';
 
-class WS_User implements IWebServiciable {
+class WS_Inscription implements IWebServiciable {
 
     public $requestParams;
 
@@ -20,18 +20,17 @@ class WS_User implements IWebServiciable {
     }
 
     public function doPost() {
+        try {
+            $cnx = Connection_BDD::getInstance();
 
-        $cnx = Connection_BDD::getInstance();
-        $cnx->beginTransaction();
-//        echo "<pre>";
-//        print_r($cnx);
-//        echo "</pre>";
-
-        $SQL = "INSERT INTO user(Pseudo, Password, Mail, Grade) VALUES (".$this->requestParams['nomUser'].",".$this->requestParams['prenomUser'].",".$this->requestParams['MailUser'].",0)";
-        $cnx->query($SQL);
-        $cnx->commit();
-        return true;
-
+            $SQL = "INSERT INTO user(Pseudo, Password, Mail, Grade) VALUES ('" . $this->requestParams['nomUser'] . "','" . $this->requestParams['passwordUser'] . "','" . $this->requestParams['MailUser'] . "','0')";
+            $cnx->query($SQL);
+            $cnx->commit();
+            return true;
+        }
+        catch(Exception $e){
+            return false;
+        }
 
     }
 

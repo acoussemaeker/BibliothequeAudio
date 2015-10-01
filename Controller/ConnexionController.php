@@ -1,14 +1,12 @@
 <?php
 
-include_once'../ws/WS_User.php';
-
+include_once '../ws/WS_Connexion.php';
 //GEstion d'erreur
-$className = "WS_User";
-echo "okslkfmqkslfkqslmkd";
+$className = "WS_Connexion";
+
 $array = [
-    "nomUser" => $_POST['nomUser'],
-    "prenomUser" => $_POST['prenomUser'],
-    "MailUser" => $_POST['MailUser']
+    "Login" => $_POST['Login'],
+    "Password" => $_POST['Password'],
 ];
 
 $ws_instance = new $className($array);
@@ -41,5 +39,9 @@ $ws_response = $ws_instance->$method();
 //        break;
 //}
 
-//header('Location: ../view/BiblioCommune.php');
-echo json_encode($ws_response);
+if($ws_response == true) {
+    return $ws_response;
+}
+else{
+    return $ws_response;
+}

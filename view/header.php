@@ -25,7 +25,8 @@ if ($connect == '1') {
             <link rel="icon" type="image/png" href="cte.png" />
             <script src="js/jquery-1.10.2.js"></script>
             <script src="/js/jquery-ui-1.10.4.min.js"></script>
-            <script src="js/script.js"></script>
+            <script src="js/script.js">
+                </script>
             <?php
         } else {
             ?>
@@ -59,16 +60,16 @@ if ($connect == '1') {
                 <?php
                 if ($connect == 0) {
 //                    echo '<li><a>Connecté en temps que : ' . $_SESSION['nom_user'] . ' ' . $_SESSION['prenom_user'].'</a></li>';
-                    echo '<input type="button" class="btn btn-default" id="logout" value="Inscription" onclick="location.href=\'Inscription.php\'" />';
-                    echo '<input type="button" class="btn btn-default" id="logout" value="Connexion" onclick="location.href=\'logout.php\'" />';
-                    echo '<input type="password" class="btn btn-default" id="logout" placeholder="Password" />';
-                    echo '<input type="text" class="btn btn-default" id="logout" placeholder="Login" />';
+                    echo '<input type="button" class="btn btn-default" id="Inscription" value="Inscription" onclick="location.href=\'Inscription.php\'" />';
+                    echo '<input type="button" class="btn btn-default" id="Connexion" value="Connexion" onclick="Connexion()" />';
+                    echo '<input type="password" class="btn btn-default" id="Password" placeholder="Password" />';
+                    echo '<input type="text" class="btn btn-default" id="Login" placeholder="Login" />';
                 } else {
                     echo '<div class=" btn-default" id="logout"></div>';
-                    echo '<input type="button" class="btn btn-default" id="logout" value="Deconnexion" onclick="location.href=\'logout.php\'" />';
-                    echo '<input type="button" class="btn btn-default" id="logout" value="Biblio perso" onclick="location.href=\'BiblioPerso.php\'" />';
-                    echo '<input type="button" class="btn btn-default" id="logout" value="Biblo commune" onclick="location.href=\'BiblioCommune.php\'" />';
-                    echo '<input type="button" class="btn btn-default" id="logout" value="profile" onclick="location.href=\'ProfilUser.php\'" />';
+                    echo '<input type="button" class="btn btn-default" id="Deconnexion" value="Deconnexion" onclick="location.href=\'logout.php\'" />';
+                    echo '<input type="button" class="btn btn-default" id="BiblioPerso" value="Biblio perso" onclick="location.href=\'BiblioPerso.php\'" />';
+                    echo '<input type="button" class="btn btn-default" id="BiblioCommune" value="Biblo commune" onclick="location.href=\'BiblioCommune.php\'" />';
+                    echo '<input type="button" class="btn btn-default" id="profile" value="profile" onclick="location.href=\'ProfilUser.php\'" />';
                 }
                 ?>
             </ul>

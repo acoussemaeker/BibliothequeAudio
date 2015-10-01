@@ -2,7 +2,6 @@
 $titre = 'Profil';
 
 include 'header.php';
-include 'Connection_BDD.php';
 $nom = "robert";
 $mdp= "bou";
 $mail = "test@super_test.eu";
