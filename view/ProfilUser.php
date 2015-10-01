@@ -27,5 +27,3 @@ $mail = "test@super_test.eu";
         <button type="button" onclick="window.location='../index.php'" class="btn btn-default btn-lg">Annuler</button>
     </div>
 </div>
-        
->>>>>>> 179dca9e36d1fa63605e034a9b4cc0db9e505034
