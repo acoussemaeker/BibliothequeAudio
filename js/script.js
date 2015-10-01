@@ -320,4 +320,3 @@ function test() {
         $( "#dateButoir" ).datepicker({ minDate: new Date(yDate, mDate - 1, jDate) });
     }*/
 
-
