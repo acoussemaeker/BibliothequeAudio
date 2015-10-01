@@ -56,6 +56,7 @@ if ($connect == '1') {
                 <?php
                 if ($connect == 0) {
 //                    echo '<li><a>Connecté en temps que : ' . $_SESSION['nom_user'] . ' ' . $_SESSION['prenom_user'].'</a></li>';
+                    echo '<input type="button" class="btn btn-default" id="logout" value="Inscription" onclick="location.href=\'Inscription.php\'" />';
                     echo '<input type="button" class="btn btn-default" id="logout" value="Connexion" onclick="location.href=\'logout.php\'" />';
                     echo '<input type="password" class="btn btn-default" id="logout" placeholder="Password" />';
                     echo '<input type="text" class="btn btn-default" id="logout" placeholder="Login" />';
