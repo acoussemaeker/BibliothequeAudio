@@ -1,7 +1,7 @@
 <?php
 session_start();
 $type = '1';
-$connect = '1'; // quand on le codera ici on le controlera avec une variable de session
+$connect = '0'; // quand on le codera ici on le controlera avec une variable de session
 if ($connect == '1') {
     $menu = 'oui';
 } else {
