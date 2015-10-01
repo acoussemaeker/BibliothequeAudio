@@ -1,7 +1,7 @@
 <?php
 session_start();
-$type = '1';
-$connect = '0'; // quand on le codera ici on le controlera avec une variable de session
+$type = '0';
+$connect = '1'; // quand on le codera ici on le controlera avec une variable de session
 if ($connect == '1') {
     $menu = 'oui';
 } else {
@@ -80,27 +80,39 @@ if ($connect == '1') {
                     <ul class="nav nav-pills nav-stacked">
                         <!--<h5 class="titreSection">COURS</h5>-->
                         <?php
-                        if($type == "0"){
-                        ?>
-                        <li <?php if ($_SERVER['PHP_SELF'] == "/BibliothequeAudio/view/playlist.php") echo "class='active'"; ?>><a href="playlist.php">Gestion des playlist</a></li> <!--Si la page actuelle est 'accueil.php', on ajoute la classe 'active' à l'élément-->
-                        <li >
-                            <div class="form-group">
-                                <input type="search" class="input-sm form-control" placeholder="Recherche">
-                                <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> Chercher</button>
-                            </div>
-                        </li>
-                        </br>
-                        <li ><img src="../image/musique.png" class="img-rounded image"></li>
-                        <li>
-                            <audio controls="controls" preload="none" class="image">
-                                <source src="audio/'.$info->Nom.'.mp3" type="audio/mp3" />
-                            </audio>
-                        </li>
-                        <br/><hr/><br/>
+                        if ($type == "0") {
+                            ?>
+                            <li <?php if ($_SERVER['PHP_SELF'] == "/BibliothequeAudio/view/playlist.php") echo "class='active'"; ?>><a href="playlist.php">Gestion des playlist</a></li> <!--Si la page actuelle est 'accueil.php', on ajoute la classe 'active' à l'élément-->
+                            <li <?php if ($_SERVER['PHP_SELF'] == "/BibliothequeAudio/view/Request_Audio.php") echo "class='active'"; ?>><a href="Request_Audio.php">Faire une demande</a></li>
+                            <li >
+                                <div class="form-group">
+                                    <input type="search" class="input-sm form-control" placeholder="Recherche">
+                                    <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> Chercher</button>
+                                </div>
+                            </li>
+                            </br>
+                            <li ><img src="../image/musique.png" class="img-rounded image"></li>
+                            <li>
+                                <audio controls="controls" preload="none" class="image">
+                                    <source src="audio/'.$info->Nom.'.mp3" type="audio/mp3" />
+                                </audio>
+                            </li>
+                            <li>
+<!--                                <div class="list-group">
+                                    <a href="#" class="list-group-item active">
+                                        Playlist favorite
+                                    </a>
+                                    <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                                    <a href="#" class="list-group-item">Morbi leo risus</a>
+                                    <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                                    <a href="#" class="list-group-item">Vestibulum at eros</a>
+                                </div>
+                            </li>-->
+                            <br/><hr/><br/>
 
-                        <?php
+                            <?php
                         }
-                        else{ //SECTION VISIBLE UNIQUEMENT PAR LES ADMINS
+                        else { //SECTION VISIBLE UNIQUEMENT PAR LES ADMINS
                             ?>
                             <h5 class="titreSection">ADMINISTRATION</h5>
                             <li <?php if ($_SERVER['PHP_SELF'] == "/BibliothequeAudio/view/Gestion_User.php") echo "class='active'"; ?>><a href="Gestion_User.php">Gestion des utilisateurs</a></li>
