@@ -3,7 +3,7 @@
 require '../view/Connection_BDD.php';
 require_once '/IWebServiciable.php';
 
-class WS_Inscription implements IWebServiciable {
+class WS_Connexion implements IWebServiciable {
 
     public $requestParams;
 
@@ -16,26 +16,22 @@ class WS_Inscription implements IWebServiciable {
     }
 
     public function doGet() {
+
+    }
+
+    public function doPost() {
         try {
             $cnx = Connection_BDD::getInstance();
 
-            $SQL = "SELECT Password
-                    FROM user
-                    WHERE Pseudo=".$this->requestParams['Login'];
+            $SQL = "SELECT Password FROM user WHERE Pseudo='".$this->requestParams['Login']."'";
             $rs = $cnx->query($SQL);
-            while($info=$rs->fetch_object())
-            {
-                return json_encode($info);
+            while ($info = $rs->fetch_object()) {
+                return (json_encode($info));
             }
         }
         catch(Exception $e){
             return false;
         }
-    }
-
-    public function doPost() {
-
-
     }
 
     public function doPut() {

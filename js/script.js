@@ -12,11 +12,13 @@ function Connexion(){
         type:'POST',
         async:false,
         success: function(data){
-            if(data.Password == this.Password){
-                document.GetElementByID
-                window.location.href ='../view/ProfilUser.php';
+            var obj = JSON.parse(data)
+            var pass= $('#Password').val()
+
+            if(obj.Password == pass){
+                window.location = '../view/ProfilUser.php';
             }else{
-                alert('toto');
+                alert('error dans le mot de passe');
             }
         },
         error: function(){

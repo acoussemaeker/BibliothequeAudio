@@ -39,9 +39,5 @@ $ws_response = $ws_instance->$method();
 //        break;
 //}
 
-if($ws_response == true) {
-    return $ws_response;
-}
-else{
-    return $ws_response;
-}
+
+echo $ws_response;
