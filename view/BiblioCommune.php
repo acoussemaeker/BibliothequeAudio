@@ -16,6 +16,7 @@ include 'header.php';
             <th>Titre</th>
             <th>Lecteur</th>
             <th></th>
+            <th></th>
         </tr>
     </thead>
     <?php
@@ -33,7 +34,7 @@ include 'header.php';
                         ' . $info->Nom . '
                     </td>
                     <td>
-                       <audio controls="controls" preload="none" class="image">
+                       <audio controls="controls" preload="none" class="">
                             <source src="audio/'.$info->Nom.'.mp3" type="audio/mp3" />
                        </audio>
                     </td>';
@@ -43,7 +44,7 @@ include 'header.php';
         }
                    
                     
-        echo '  </tr>';
+        echo '<td><input type="hidden" value="haha"/> </td>  </tr>';
     }
 
     echo '</table>';
