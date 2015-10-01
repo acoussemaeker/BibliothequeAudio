@@ -91,9 +91,8 @@ html {
 }
 
 #left{
-    float:left;
-    margin-top:2.5%;
-    margin-right:24px;
+    float:right;
+/*    margin-right:300px;*/
 }
 
 .tableListe{
