@@ -5,7 +5,7 @@ include_once '../ws/WS_Connexion.php';
 $className = "WS_Connexion";
 
 $array = [
-    "Login" => $_POST['Login'],
+    "Pseudo" => $_POST['Pseudo'],
     "Password" => $_POST['Password'],
 ];
 

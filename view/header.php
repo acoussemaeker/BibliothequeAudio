@@ -1,15 +1,26 @@
 <?php
+session_start();
+
+if(isset($_POST["Pseudo"])){
+
+    $_SESSION['connexion'] = $_POST["Pseudo"];
+    $_SESSION['password'] = $_POST["Password"];
+    $connect = '1';
+}else{
+    $_session['connexion'] = "0";
+    $connect = '0';
+}
+
 include '../view/Connection_BDD.php';
 $cnx = Connection_BDD::getInstance();
-
-session_start();
 $type = '0';
-$connect = '0'; // quand on le codera ici on le controlera avec une variable de session
+ // quand on le codera ici on le controlera avec une variable de session
 if ($connect == '1') {
     $menu = 'oui';
 } else {
     $menu = "non";
 }
+
 ?>
 <!DOCTYPE html>
 <html>

@@ -2,7 +2,7 @@ function Connexion(){
 
     var URL = "../Controller/ConnexionController.php";
     var params = {
-        'Login' : $('#Login').val(),
+        'Pseudo' : $('#Login').val(),
         'Password' : $('#Password').val()
     };
     $.ajax({
@@ -12,11 +12,22 @@ function Connexion(){
         type:'POST',
         async:false,
         success: function(data){
+            alert(data);
             var obj = JSON.parse(data)
             var pass= $('#Password').val()
 
             if(obj.Password == pass){
-                window.location = '../view/ProfilUser.php';
+                //window.location = '../view/ProfilUser.php';
+
+                $.ajax({
+                    type: "POST",
+                    url: "../view/ProfilUser.php",
+                    data: { Password: obj.Password,
+                        Pseudo: obj.Pseudo},
+                    success:function(data){
+                        $('body').replaceWith(data);
+                    }
+                });
             }else{
                 alert('error dans le mot de passe');
             }
