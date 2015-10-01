@@ -3,7 +3,7 @@
 require '../view/Connection_BDD.php';
 require_once '/IWebServiciable.php';
 
-class WS_User implements IWebServiciable {
+class WS_SeeUser implements IWebServiciable {
 
     public $requestParams;
 
@@ -16,13 +16,18 @@ class WS_User implements IWebServiciable {
     }
 
     public function doGet() {
+        $cnx = Connection_BDD::getInstance();
+        $SQL = "SELECT * FROM user
+            ORDER BY Pseudo ASC";
+        $rs = $cnx->query($SQL);
+
+        while($info=$rs->fetch_object())
+        {
+            return json_encode($info);
+        }
     }
 
     public function doPost() {
-        $cnx = Connection_BDD::getInstance();
-        $SQL = "INSERT INTO user(Pseudo, Password, Mail, Grade) VALUES (".$this->requestParams['nomUser'].",".$this->requestParams['prenomUser'].",".$this->requestParams['MailUser'].",0)";
-        $cnx->query($SQL);
-        return true;
     }
 
     public function doPut() {

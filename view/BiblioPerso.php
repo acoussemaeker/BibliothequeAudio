@@ -2,7 +2,7 @@
 <?php
 $titre = 'Bibliotheque Personnel';
 include 'header.php';
-include 'Connection_BDD.php';
+
 ?>
 
 <!--    <body>

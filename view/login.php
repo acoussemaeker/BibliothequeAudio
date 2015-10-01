@@ -6,8 +6,6 @@
         exit;
     }
     
-    include 'Connection_BDD.php';
-    
     $SQL = "SELECT * FROM utilisateur WHERE login= '".$login."' ";
     $rs=$cnx->query($SQL);
     

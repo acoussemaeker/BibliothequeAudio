@@ -1,8 +1,6 @@
 <?php
-
 $titre = 'Gestion des utilisateur';
 include 'header.php';
-include 'Connection_BDD.php';
 ?>
 <table class="table table-hover tableListe">
     <thead>

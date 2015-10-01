@@ -1,16 +1,15 @@
 <?php
 
-include_once 'ws/WS_Livre.php';
-include_once 'ws/WS_Securities.php';
+include_once'../ws/WS_User.php';
 
 //GEstion d'erreur
 $className = "WS_".$_GET['act'];
 $ws_instance = new $className(array());
-$ws_security = new WS_Securities();
+//$ws_security = new WS_Securities();
 
-if($ws_instance->doNeedAuth())
-    if($ws_security->isAuth() == false)
-        return 'error';
+//if($ws_instance->doNeedAuth())
+//    if($ws_security->isAuth() == false)
+//        return 'error';
 
 $method = "do".strtoupper($_SERVER['REQUEST_METHOD']);
 

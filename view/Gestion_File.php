@@ -1,7 +1,7 @@
 <?php
 $titre = 'Gestion des fichier audio';
 include 'header.php';
-include 'Connection_BDD.php';
+
 ?>
 
 <table class="table table-hover tableListe">

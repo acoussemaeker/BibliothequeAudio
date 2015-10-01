@@ -1,10 +1,6 @@
-
 <?php
 $titre = 'Bibliotheque Commune';
-
-
 include 'header.php';
-include 'Connection_BDD.php';
 
 ?>
 

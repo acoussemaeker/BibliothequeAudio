@@ -1,4 +1,7 @@
 <?php
+include '../view/Connection_BDD.php';
+$cnx = Connection_BDD::getInstance();
+
 session_start();
 $type = '1';
 $connect = '0'; // quand on le codera ici on le controlera avec une variable de session
