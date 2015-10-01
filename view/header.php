@@ -41,7 +41,7 @@ session_start();
                     echo '<input type="button" class="btn btn-default" id="logout" value="Deconnexion" onclick="location.href=\'logout.php\'" />';
                     echo '<input type="button" class="btn btn-default" id="logout" value="Biblio perso" onclick="location.href=\'logout.php\'" />';
                     echo '<input type="button" class="btn btn-default" id="logout" value="Biblo commune" onclick="location.href=\'logout.php\'" />';
-                    echo '<input type="button" class="btn btn-default" id="logout" value="profile" onclick="location.href=\'logout.php\'" />';
+                    echo '<input type="button" class="btn btn-default" id="logout" value="profile" onclick="location.href=\'view/ProfilUser.php\'" />';
                     
                 }
                 ?>
