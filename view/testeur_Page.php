@@ -14,30 +14,40 @@ include 'header.php';
             <button onclick="setCurTime()" type="button">Set time position to 20 seconds before</button>
             <input onclick="info()" type="button" value="afficher le temps" />
             <input onclick="bigtest()" type="button" value="ecrire le temps" />
+            <input type="button" onclick="afficherCompteur()" value="afficher la varible compteur" class="btn btn-success"/>
             <script>
                 var audio = document.getElementById("audio");
+                var compteur = 0;
+                $("#audio").bind("play", function () {
+                    alert('tesst et putain ca marche c\'est deja ca');
+                    audio.play();
+//                    while (audio.currentTime <= audio.duration) {
+//                        compteur = compteur++;
+//                    }
+                });
                 function info() {
                     alert(audio.duration);
                 }
-                if(audio.paused){
-                    alert('go');
+                function setCurTime() {
+                    audio.currentTime = audio.currentTime - 20;
                 }
-                    function setCurTime() {
-                        audio.currentTime = audio.currentTime - 20;
-                    }
 
-                    function bigtest() {
-                        var bitch = 100;
-                        $.ajax({
-                            url: 'recup.php',
-                            method: 'post',
-                            data: {number: bitch},
-                            success: function (data) {
+                function afficherCompteur() {
+                    alert(compteur);
+                }
+
+
+                function bigtest() {
+                    var bitch = audio.currentTime;
+                    $.ajax({
+                        url: 'recup.php',
+                        method: 'get',
+                        data: {number: bitch},
+                        success: function (data) {
 //                            alert("enregistrement position OK")
-                                window.location = 'recup.php';
-
-                            }
-                        });
+                            window.location = 'recup.php?number=' + bitch; // renvoi la donnée qui est recuperer dans la page en php :) 
+                        }
+                    });
                 }
             </script>
 
