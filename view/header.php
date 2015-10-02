@@ -31,20 +31,6 @@ if ($connect == '1') {
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <!--<link rel="stylesheet" href="css/datepicker.css"/>-->
-        <?php
-        if ($titre == 'Connexion') {
-            ?>
-            <link rel="stylesheet" href="css/bootstrap.min.css"/>
-            <link rel="stylesheet" href="css/ui-flick/jquery-ui.min.css"/>
-            <link rel="stylesheet" href="css/style.css"/>
-            <link rel="icon" type="image/png" href="cte.png" />
-            <script src="js/jquery-1.10.2.js"></script>
-            <script src="/js/jquery-ui-1.10.4.min.js"></script>
-            <script src="js/script.js">
-                </script>
-            <?php
-        } else {
-            ?>
             <link rel="stylesheet" href="../css/bootstrap.min.css"/>
             <link rel="stylesheet" href="../css/ui-flick/jquery-ui.min.css"/>
             <link rel="stylesheet" href="../css/style.css"/>
@@ -53,9 +39,6 @@ if ($connect == '1') {
             <script src="../js/jquery-ui-1.10.4.min.js"></script>
             <script src="../js/jquery.ui.datepicker-fr.js"></script>
             <script src="../js/script.js"></script>
-            <?php
-        }
-        ?>
         <title><?php echo $titre; ?></title>
     </head>
     <body>

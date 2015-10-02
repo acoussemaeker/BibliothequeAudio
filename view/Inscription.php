@@ -1,31 +1,3 @@
-<script>
-    function Inscription(){
-        var URL = "../Controller/InscriptionController.php";
-        var params = {
-            'nomUser' : $('#nomUser').val(),
-            'passwordUser' : $('#passwordUser').val(),
-            'MailUser' : $('#MailUser').val()
-        };
-        $.ajax({
-        url: URL,
-        data: params,
-        dataType: 'text',
-        type:'POST',
-        async:false,
-        success: function(data){
-            if(data == true){
-                window.location.href ='../index.php';
-            }else{
-                alert('toto');
-            }
-        },
-        error: function(){
-        alert('Problème rencontré dans le réseau.');}
-        });
-    }
-</script>
-
-
 <?php
 $titre = 'Inscription';
 include 'header.php';
@@ -46,7 +18,7 @@ include 'header.php';
                 <label for="contenu">Mail</label>
                 <input type="email" value="" name="MailUser" id="MailUser" class="form-control"/>
             </div>
-            <button type="button" onclick="Inscription()" class="btn btn-success btn-lg">Sauvegarder</button>
+            <button type="button" onclick="Verif()" class="btn btn-success btn-lg">Sauvegarder</button>
         <button type="button" onclick="window.location='../index.php'" class="btn btn-default btn-lg">Annuler</button>
     </div>
 </div>

@@ -12,7 +12,7 @@ include 'header.php';
 <table class="table table-hover tableListe">
     <thead>
         <tr class="info">
-            <th>Image</th>
+<!--            <th>Image</th>-->
             <th>Titre</th>
             <th>Lecteur</th>
             <th></th>
@@ -28,14 +28,14 @@ include 'header.php';
 
         echo '  <tr>
                     <td>
-                        ' . $info->Nom . '
+                        '. $info->Emplacement.'
                     </td>
                     <td>
                         ' . $info->Nom . '
                     </td>
                     <td>
                        <audio controls="controls" preload="none" class="">
-                            <source src="audio/'.$info->Nom.'.mp3" type="audio/mp3" />
+                            <source src="audio/'.$info->Emplacement.'.mp3" type="audio/mp3" />
                        </audio>
                     </td>';
         

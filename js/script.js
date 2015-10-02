@@ -1,3 +1,45 @@
+function Verif(){
+    if($('#nomUser').val() == ""){
+        alert("veuillez remplir le pseudo");
+    }else{
+        if($('#passwordUser').val()==""){
+            alert("veuillez remplir le password");
+        }else{
+            if($('#MailUser').val()==""){
+                alert("veuillez remplir le Mail");
+            }else{
+                Inscription();
+            }
+        }
+    }
+}
+
+function Inscription(){
+    var URL = "../Controller/InscriptionController.php";
+    var params = {
+        'nomUser' : $('#nomUser').val(),
+        'passwordUser' : $('#passwordUser').val(),
+        'MailUser' : $('#MailUser').val()
+    };
+    $.ajax({
+        url: URL,
+        data: params,
+        dataType: 'text',
+        type:'POST',
+        async:false,
+        success: function(data){
+            if(data == true){
+                alert("Inscription valider, Redirection...");
+                window.location.href ='../index.php';
+            }else{
+                alert('toto');
+            }
+        },
+        error: function(){
+            alert('Problème rencontré dans le réseau.');}
+    });
+}
+
 function Connexion(){
 
     var URL = "../Controller/ConnexionController.php";
@@ -35,8 +77,6 @@ function Connexion(){
             alert('Problème rencontré dans le réseau.');}
     });
 }
-
-//$(ProfilUser.php).ready(GetUser());
 
 function GetUser(Id){
     var URL = "../Controller/GetUserController.php";
