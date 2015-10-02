@@ -82,8 +82,10 @@ if ($connect == '1') {
                 } else {
                     echo '<div class=" btn-default" id="logout"></div>';
                     echo '<input type="button" class="btn btn-default position" id="Deconnexion" value="Deconnexion" onclick="location.href=\'../index.php\'" />';
+                    if ($type == 0){
                     echo '<input type="button" class="btn btn-default position" id="BiblioPerso" value="Biblio perso" onclick="location.href=\'BiblioPerso.php\'" />';
                     echo '<input type="button" class="btn btn-default  position" id="BiblioCommune" value="Biblo commune" onclick="location.href=\'BiblioCommune.php\'" />';
+                    }
                     echo '<input type="button" class="btn btn-default  position" id="profil" value="profil" onclick="GetUser('.$test->id.')" />';
                 }
                 ?>
