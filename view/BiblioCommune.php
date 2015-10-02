@@ -35,7 +35,7 @@ include 'header.php';
                     </td>
                     <td>
                        <audio controls="controls" preload="none" class="">
-                            <source src="audio/'.$info->Emplacement.'.mp3" type="audio/mp3" />
+                            <source src="../audio/'.$info->Nom.'.mp3" type="audio/mp3" />
                        </audio>
                     </td>';
         
