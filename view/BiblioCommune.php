@@ -3,7 +3,11 @@ $titre = 'Bibliotheque Commune';
 include 'header.php';
 
 ?>
-
+<script>
+    $( document ).ready(function() {
+        GetAudios();
+    });
+</script>
 <!--    <body>
         
     </body>

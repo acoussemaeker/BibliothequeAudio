@@ -98,6 +98,27 @@ function GetUser(Id){
     });
 }
 
+
+function GetAudios(){
+    var URL = "../Controller/GetAudiosController.php";
+    var params = {
+    };
+    $.ajax({
+        url: URL,
+        data: params,
+        dataType: 'text',
+        type:'POST',
+        async:false,
+        success: function(data){
+            alert(data);
+            var obj = JSON.parse(data);
+            alert(obj.Nom +','+obj.Emplacement);
+        },
+        error: function(){
+            alert('Problème rencontré dans le réseau.');}
+    });
+}
+
 function UpdateUser(Id){
     var URL = "../Controller/UpdateUserController.php";
     var params = { 'Id' : Id,

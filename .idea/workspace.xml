@@ -28,8 +28,71 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.61044616" vertical-offset="1020" max-vertical-offset="7735">
-              <caret line="93" column="55" selection-start-line="93" selection-start-column="55" selection-end-line="93" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.44504896" vertical-offset="1529" max-vertical-offset="8092">
+              <caret line="114" column="48" selection-start-line="114" selection-start-column="48" selection-end-line="114" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BiblioCommune.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/BiblioCommune.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="1020">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="9" selection-end-column="9" />
+              <folding>
+                <marker date="1443775198822" expanded="true" signature="464:512" placeholder="SELECT * FRO..audio..." />
+                <marker date="1443775198822" expanded="true" signature="607:1048" placeholder="..." />
+                <marker date="1443775198822" expanded="true" signature="632:706" placeholder="..." />
+                <marker date="1443775198822" expanded="true" signature="731:800" placeholder="..." />
+                <marker date="1443775198822" expanded="true" signature="825:1048" placeholder="..." />
+                <marker date="1443775198822" expanded="true" signature="900:1022" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetAudiosController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller/GetAudiosController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="816">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WS_GetAudios.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ws/WS_GetAudios.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="918">
+              <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+              <folding>
+                <marker date="1443775687756" expanded="true" signature="428:447" placeholder="SELECT * FRO..Audio..." />
+                <marker date="1443775687756" expanded="true" signature="428:447" placeholder="SELECT * FRO..Audio..." />
+                <marker date="1443775687756" expanded="true" signature="428:464" placeholder="SELECT * FRO..Audio..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WS_GetUser.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ws/WS_GetUser.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-20.961538" vertical-offset="33" max-vertical-offset="952">
+              <caret line="34" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <folding>
+                <marker date="1443748348558" expanded="true" signature="426:529" placeholder="SELECT * FRO..user..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetUserController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller/GetUserController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="833">
+              <caret line="14" column="37" selection-start-line="0" selection-start-column="0" selection-end-line="43" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -57,11 +120,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Inscription.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/Inscription.php">
+      <file leaf-file-name="ConnexionController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller/ConnexionController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="493">
-              <caret line="12" column="57" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="57" />
+            <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="867">
+              <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -99,13 +162,17 @@
         <option value="$PROJECT_DIR$/Controller/GetUserController.php" />
         <option value="$PROJECT_DIR$/Controller/UpdatdeUserController.php" />
         <option value="$PROJECT_DIR$/Controller/UpdateUserController.php" />
-        <option value="$PROJECT_DIR$/error.php" />
         <option value="$PROJECT_DIR$/view/ProfilUser.php" />
         <option value="$PROJECT_DIR$/ws/WS_UpdateUser.php" />
         <option value="$PROJECT_DIR$/view/Inscription.php" />
-        <option value="$PROJECT_DIR$/js/script.js" />
-        <option value="$PROJECT_DIR$/view/BiblioCommune.php" />
         <option value="$PROJECT_DIR$/view/header.php" />
+        <option value="$PROJECT_DIR$/ws/WS_GetAudio.php" />
+        <option value="$PROJECT_DIR$/Controller/GetAudio.php" />
+        <option value="$PROJECT_DIR$/Controller/GetAudios.php" />
+        <option value="$PROJECT_DIR$/view/BiblioCommune.php" />
+        <option value="$PROJECT_DIR$/error.php" />
+        <option value="$PROJECT_DIR$/js/script.js" />
+        <option value="$PROJECT_DIR$/ws/WS_GetAudios.php" />
       </list>
     </option>
   </component>
@@ -273,7 +340,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -282,7 +349,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17708333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17708333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946146" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -576,33 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/ConnexionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="867">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/GetUserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11422172" vertical-offset="0" max-vertical-offset="893">
-          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/error.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="374">
-          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#th#0;n#tr#0;n#table#0;n#font#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#th#0;n#tr#0;n#table#0;n#font#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controller/UpdateUserController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="884">
@@ -625,14 +665,6 @@
             <marker date="1443772167898" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
             <marker date="1443772167898" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ws/WS_GetUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.0" vertical-offset="0" max-vertical-offset="952">
-          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -663,20 +695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/BiblioCommune.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="952">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="24" selection-end-column="28" />
-          <folding>
-            <marker date="1443773186990" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..audio..." />
-            <marker date="1443773186990" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1443773186990" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1443773186990" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1443773186990" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-83.03846" vertical-offset="0" max-vertical-offset="2363">
@@ -693,6 +711,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/InscriptionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-28.807692" vertical-offset="16" max-vertical-offset="935">
+          <caret line="45" column="14" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/ConnexionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="867">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/GetUserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="833">
+          <caret line="14" column="37" selection-start-line="0" selection-start-column="0" selection-end-line="43" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/BiblioCommune.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="1020">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="9" selection-end-column="9" />
+          <folding>
+            <marker date="1443775198822" expanded="true" signature="464:512" placeholder="SELECT * FRO..audio..." />
+            <marker date="1443775198822" expanded="true" signature="607:1048" placeholder="..." />
+            <marker date="1443775198822" expanded="true" signature="632:706" placeholder="..." />
+            <marker date="1443775198822" expanded="true" signature="731:800" placeholder="..." />
+            <marker date="1443775198822" expanded="true" signature="825:1048" placeholder="..." />
+            <marker date="1443775198822" expanded="true" signature="900:1022" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/error.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11590909" vertical-offset="0" max-vertical-offset="880">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#th#0;n#tr#0;n#table#0;n#font#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/GetAudiosController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="816">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ws/WS_Inscription.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="1037">
@@ -703,18 +778,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/InscriptionController.php">
+    <entry file="file://$PROJECT_DIR$/ws/WS_GetUser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-28.807692" vertical-offset="16" max-vertical-offset="935">
-          <caret line="45" column="14" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="14" />
-          <folding />
+        <state vertical-scroll-proportion="-20.961538" vertical-offset="33" max-vertical-offset="952">
+          <caret line="34" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <marker date="1443748348558" expanded="true" signature="426:529" placeholder="SELECT * FRO..user..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ws/WS_GetAudios.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="918">
+          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+          <folding>
+            <marker date="1443775687756" expanded="true" signature="428:447" placeholder="SELECT * FRO..Audio..." />
+            <marker date="1443775687756" expanded="true" signature="428:447" placeholder="SELECT * FRO..Audio..." />
+            <marker date="1443775687756" expanded="true" signature="428:464" placeholder="SELECT * FRO..Audio..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61044616" vertical-offset="1020" max-vertical-offset="7735">
-          <caret line="93" column="55" selection-start-line="93" selection-start-column="55" selection-end-line="93" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.44504896" vertical-offset="1529" max-vertical-offset="8092">
+          <caret line="114" column="48" selection-start-line="114" selection-start-column="48" selection-end-line="114" selection-end-column="48" />
           <folding />
         </state>
       </provider>
