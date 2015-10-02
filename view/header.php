@@ -87,6 +87,7 @@ if ($connect == '1') {
                     echo '<input type="button" class="btn btn-default  position" id="BiblioCommune" value="Biblo commune" onclick="location.href=\'BiblioCommune.php\'" />';
                     }
                     echo '<input type="button" class="btn btn-default  position" id="profil" value="profil" onclick="GetUser('.$test->id.')" />';
+//                    echo '<input type="button" class="btn btn-default  position" id="profil" value="profil" onclick="location.href =\'../view/ProfilUser.php \' " />';
                 }
                 ?>
             </ul>

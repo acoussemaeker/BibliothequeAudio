@@ -36,9 +36,9 @@ function Connexion(){
     });
 }
 
+//$(ProfilUser.php).ready(GetUser());
+
 function GetUser(Id){
-
-
     var URL = "../Controller/GetUserController.php";
     var params = { 'Id' : Id
     };
@@ -49,17 +49,41 @@ function GetUser(Id){
         type:'POST',
         async:false,
         success: function(data){
-            alert(data);
+            //alert(data);
             var obj = JSON.parse(data);
-            alert(obj.Pseudo);
-            document.getElementById("nomUser").value = obj.Pseudo;
-            document.getElementById("password").value = obj.Mail;
-            document.getElementById("email").value = obj.Mail;
+            window.location = "../view/ProfilUser.php?Pseudo="+obj.Pseudo+"&Password="+obj.Password+"&Email="+obj.Mail;
         },
         error: function(){
             alert('Problème rencontré dans le réseau.');}
     });
 }
+
+function UpdateUser(Id){
+    var URL = "../Controller/UpdateUserController.php";
+    var params = { 'Id' : Id,
+        'Pseudo' : $('#pseudo').val(),
+        'Password' : $('#password').val(),
+        'Mail' : $('#email').val()
+    };
+    $.ajax({
+        url: URL,
+        data: params,
+        dataType: 'text',
+        type:'POST',
+        async:false,
+        success: function(data){
+            if(data == true) {
+                alert("modification faite, redirection...");
+                window.location = "../view/BiblioCommune.php";
+            }else{
+                alert("error");
+            }
+        },
+        error: function(){
+            alert('Problème rencontré dans le réseau.');}
+    });
+}
+
 
 //function login(){
 //    var email = document.getElementById('inputEmail3').value;
