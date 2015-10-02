@@ -31,13 +31,13 @@ include 'header.php';
     while ($info = $rs->fetch_object()) {
 
         echo '  <tr>
-                    <td>
-                        '. $info->Emplacement.'
+                    <td class="row_biblio">
+                        <img src="../image/'.$info->Nom.'.png"  class="img-thumbnail image_musique">
                     </td>
                     <td>
                         ' . $info->Nom . '
                     </td>
-                    <td>
+                    <td class="row_biblio">
                        <audio controls="controls" preload="none" class="">
                             <source src="../audio/'.$info->Nom.'.mp3" type="audio/mp3" />
                        </audio>
