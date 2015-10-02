@@ -3,7 +3,7 @@
 require '../view/Connection_BDD.php';
 require_once '/IWebServiciable.php';
 
-class WS_Connexion implements IWebServiciable {
+class WS_GetUser implements IWebServiciable {
 
     public $requestParams;
 
@@ -16,21 +16,16 @@ class WS_Connexion implements IWebServiciable {
     }
 
     public function doGet() {
-
     }
 
     public function doPost() {
-        try {
-            $cnx = Connection_BDD::getInstance();
-
-            $SQL = "SELECT id, Pseudo, Password, Grade FROM user WHERE Pseudo='".$this->requestParams['Pseudo']."'";
-            $rs = $cnx->query($SQL);
-            while ($info = $rs->fetch_object()) {
-                return (json_encode($info));
-            }
-        }
-        catch(Exception $e){
-            return false;
+        $cnx = Connection_BDD::getInstance();
+        $SQL = "SELECT * FROM user WHERE Id='".$this->requestParams['Id']."'
+            ORDER BY Grade ASC, Pseudo ASC";
+        $rs = $cnx->query($SQL);
+//        return ($SQL);
+         while ($info = $rs->fetch_object()) {
+            return (json_encode($info));
         }
     }
 

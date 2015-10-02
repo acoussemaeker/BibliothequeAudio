@@ -12,8 +12,8 @@ function Connexion(){
         type:'POST',
         async:false,
         success: function(data){
-            var obj = JSON.parse(data)
-            var pass= $('#Password').val()
+            var obj = JSON.parse(data);
+            var pass= $('#Password').val();
 
             if(obj.Password == pass){
                 //window.location = '../view/ProfilUser.php';
@@ -30,6 +30,31 @@ function Connexion(){
             }else{
                 alert('error dans le mot de passe');
             }
+        },
+        error: function(){
+            alert('Problème rencontré dans le réseau.');}
+    });
+}
+
+function GetUser(Id){
+
+
+    var URL = "../Controller/GetUserController.php";
+    var params = { 'Id' : Id
+    };
+    $.ajax({
+        url: URL,
+        data: params,
+        dataType: 'text',
+        type:'POST',
+        async:false,
+        success: function(data){
+            alert(data);
+            var obj = JSON.parse(data);
+            alert(obj.Pseudo);
+            document.getElementById("nomUser").value = obj.Pseudo;
+            document.getElementById("password").value = obj.Mail;
+            document.getElementById("email").value = obj.Mail;
         },
         error: function(){
             alert('Problème rencontré dans le réseau.');}

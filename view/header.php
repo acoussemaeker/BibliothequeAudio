@@ -1,8 +1,9 @@
 <?php
 session_start();
+$test = (json_decode($_SESSION['connexion']));
 
 if($_SESSION['connexion'] != null){
-    $test = (json_decode($_SESSION['connexion']));
+
     $connect = 1;
     if($test->Grade =='1'){
         $type = '1';
@@ -18,7 +19,6 @@ else{
 include '../view/Connection_BDD.php';
 $cnx = Connection_BDD::getInstance();
 
- // quand on le codera ici on le controlera avec une variable de session
 if ($connect == '1') {
     $menu = 'oui';
 } else {
@@ -84,7 +84,7 @@ if ($connect == '1') {
                     echo '<input type="button" class="btn btn-default position" id="Deconnexion" value="Deconnexion" onclick="location.href=\'../index.php\'" />';
                     echo '<input type="button" class="btn btn-default position" id="BiblioPerso" value="Biblio perso" onclick="location.href=\'BiblioPerso.php\'" />';
                     echo '<input type="button" class="btn btn-default  position" id="BiblioCommune" value="Biblo commune" onclick="location.href=\'BiblioCommune.php\'" />';
-                    echo '<input type="button" class="btn btn-default  position" id="profile" value="profile" onclick="location.href=\'ProfilUser.php\'" />';
+                    echo '<input type="button" class="btn btn-default  position" id="profil" value="profil" onclick="GetUser('.$test->id.')" />';
                 }
                 ?>
             </ul>
