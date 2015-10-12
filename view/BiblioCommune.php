@@ -16,7 +16,7 @@ include 'header.php';
 <table class="table table-hover tableListe">
     <thead>
         <tr class="info">
-<!--            <th>Image</th>-->
+            <th>Image</th>
             <th>Titre</th>
             <th>Lecteur</th>
             <th></th>
@@ -34,7 +34,7 @@ include 'header.php';
                     <td class="row_biblio">
                         <img src="../image/'.$info->Nom.'.png"  class="img-thumbnail image_musique">
                     </td>
-                    <td>
+                    <td class="row_biblio">
                         ' . $info->Nom . '
                     </td>
                     <td class="row_biblio">

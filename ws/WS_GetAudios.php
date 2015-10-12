@@ -19,8 +19,9 @@ class WS_GetAudios implements IWebServiciable {
     }
 
     public function doPost() {
+
         $cnx = Connection_BDD::getInstance();
-        $SQL = "SELECT * FROM Audio Order BY Id DESC ";
+        $SQL = "SELECT * FROM audio Order BY Id DESC ";
         $rs = $cnx->query($SQL);
         while ($info = $rs->fetch_object()) {
             return (json_encode($info));

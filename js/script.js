@@ -110,9 +110,7 @@ function GetAudios(){
         type:'POST',
         async:false,
         success: function(data){
-            alert(data);
-            var obj = JSON.parse(data);
-            alert(obj.Nom +','+obj.Emplacement);
+            //alert(data);
         },
         error: function(){
             alert('Problème rencontré dans le réseau.');}
